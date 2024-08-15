@@ -1,0 +1,639 @@
+/* Style de base pour le corps de la page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #141414;
+  color: white;
+  margin: 0;
+}
+
+/* Style pour l'en-tête */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #444444;
+  color: white;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Contenu de l'en-tête, alignement des éléments */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 50px;
+}
+
+/* Style pour le titre principal de l'en-tête */
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+  text-shadow: 3px 1px 1px rgb(48, 45, 45);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Lien du titre pour revenir à l'accueil */
+header h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Effet survol du titre */
+header h1:hover {
+  color: #ffcc00;
+  transform: scale(1.1);
+}
+
+/* Style pour la navigation */
+nav {
+  margin-left: 850px;
+}
+
+/* Liste des éléments de navigation */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Chaque élément de navigation */
+nav ul li {
+  margin-left: 20px;
+  position: relative;
+}
+
+/* Style des liens de navigation */
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Effet survol des liens de navigation */
+nav ul li a:hover {
+  color: #8afcfc;
+  transform: scale(1.1);
+}
+
+/* Conteneur de navigation */
+.navigation {
+  width: 200px;
+  display: flex;
+}
+
+/* Style pour le menu déroulant */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+/* Bouton du menu déroulant */
+.dropbtn {
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 12px 16px;
+  border-radius: 5px;
+}
+
+/* Effet survol du bouton du menu déroulant */
+.dropbtn:hover {
+  background-color: #333;
+  color: #6ce6f7;
+}
+
+/* Contenu du menu déroulant */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
+}
+
+/* Liens dans le menu déroulant */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Effet survol des liens du menu déroulant */
+.dropdown-content a:hover {
+  background-color: #555;
+  color: #93f3e3;
+}
+
+/* Affichage du menu déroulant au survol */
+.dropdown:hover .dropdown-content {
+  display: block;
+  max-height: 500px;
+}
+
+/* Indicateur de défilement vers le bas */
+.scroll-down-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  color: white;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+}
+
+/* Positionnement de la barre de navigation */
+.navbar {
+  right: 0;
+}
+
+/* Style pour les icônes factices */
+.fake-icon {
+  display: flex;
+  flex-direction: row;
+  right: 0;
+}
+
+/* Conteneur d'icône avec une info-bulle */
+.icon-with-tooltip {
+  position: relative;
+}
+
+/* Style des images des icônes */
+.icon-with-tooltip img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Style de l'info-bulle */
+.tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  top: 50%; /* Position au-dessus de l'icône */
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Affichage de l'info-bulle au survol */
+.icon-with-tooltip:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Animation de rebond */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Style pour les titres de section */
+h2 {
+  font-size: 1.8em;
+  margin: 1em 0;
+}
+
+/* Style des sections */
+section {
+  margin-top: 0px;
+  margin-bottom: 2em;
+}
+
+/* Style pour la section du meilleur film */
+.best-movie {
+  left: 0%;
+  margin-top: 50px;
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.938) inset;
+}
+
+/* Image de fond pour le meilleur film */
+.best-movie-image {
+  margin-left: 10px;
+  width: 1200px;
+  height: 100%;
+  background-size: cover;
+  filter: blur(4px);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 50px;
+  box-shadow: 10px 10px 500px #141414 inset;
+  border-radius: 15px;
+}
+
+/* Contenu textuel pour le meilleur film */
+.best-movie-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  padding: 50px;
+  max-width: 100%;
+  margin-top: 100px;
+}
+
+/* Titre pour le meilleur film */
+.best-movie-content h2 {
+  font-size: 5em;
+  margin: 0 0 20px;
+}
+
+/* Paragraphe pour le meilleur film */
+.best-movie-content p {
+  width: 70%;
+  font-size: 1.8em;
+  margin: 150px 0 20px;
+}
+
+/* Conteneur pour les boutons du meilleur film */
+.best-movie-buttons {
+  margin-top: 150px;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Style pour les boutons du meilleur film */
+.best-movie-buttons button {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Avenir Next LT W01 Bold", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 12px 23px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: color 300ms ease-in;
+}
+
+/* Effet survol des boutons du meilleur film */
+.best-movie-buttons button:hover,
+.best-movie-buttons button:active {
+  outline: 0;
+}
+
+/* Style supplémentaire pour le bouton au survol */
+.best-movie-buttons button:hover {
+  cursor: pointer;
+}
+
+/* Animation d'avant-plan pour les boutons du meilleur film */
+.best-movie-buttons button:before {
+  background-color: rgba(255, 255, 255, 0.2);
+  content: "";
+  height: calc(100% + 2px);
+  position: absolute;
+  left: -18px;
+  top: -7px;
+  transition: background-color 100ms ease-in, transform 100ms ease-in;
+  width: calc(100% + 14px);
+  z-index: -1;
+  border-radius: 15px;
+}
+
+/* Effet survol d'avant-plan pour les boutons du meilleur film */
+.best-movie-buttons button:hover:before {
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translate(23px, 12px);
+  border-radius: 15px;
+}
+
+/* Style spécifique pour les boutons "plus d'infos" et "jouer" */
+#more-info-button, #play {
+  margin-left: 50px;
+  margin-top: 50px;
+  border-radius: 15px;
+  border-color: rgba(241, 235, 235, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Effet survol pour les boutons "plus d'infos" et "jouer" */
+#more-info-button:hover:before,
+#play:hover:before {
+  background-color: rgba(180, 180, 180, 0.8);
+}
+
+/* Style responsive pour les boutons du meilleur film */
+@media (min-width: 768px) {
+  .best-movie-buttons button {
+    padding: 16px 32px;
+  }
+}
+
+/* Section des sliders */
+.slider-section {
+  margin: 50px 0 0 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 350px;
+}
+
+/* Conteneur pour la liste des films */
+.movies-list-container {
+  margin: 30px auto;
+  width: 80%;
+  display: flex;
+  align-items: center;
+}
+
+/* Liste des films */
+.movies-list {
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+  flex-wrap: nowrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  width: 100%;
+  position: relative;
+}
+
+/* Cache la barre de défilement dans les navigateurs compatibles */
+.movies-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* Style de chaque film */
+.movie {
+  margin: 0 1em;
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: transform 0.5s ease-in-out;
+  height: 350px;
+}
+
+/* Style des images des films */
+.movie img {
+  object-fit: fill;
+  border-radius: 5px;
+  width: 150px;
+  height: 225px;
+}
+
+/* Style des titres des films */
+.movie-title {
+  max-width: 150px;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 1em;
+}
+
+/* Boutons de défilement */
+.scroll-button {
+  position: sticky;
+  top: -50px;
+  height: 60px;
+  width: 60px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  line-height: 1em;
+  margin: 0 0.7em 100px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Effet survol des boutons de défilement */
+.scroll-button:hover {
+  background-color: #acacac;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 2 solid white;
+  color: #000;
+}
+
+/* Animation d'avant-plan pour les boutons de défilement */
+.scroll-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s ease;
+}
+
+/* Effet survol d'avant-plan pour les boutons de défilement */
+.scroll-button:hover::before {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+/* Style général pour les modals */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenu du modal */
+.modal-content {
+    background-color: #333;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+    color: white;
+}
+
+/* En-tête du modal */
+.modal-header {
+    color: #3dffff;
+    margin-top: 0;
+    text-align: center;
+}
+
+/* Corps du modal */
+.modal-body {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Colonne gauche du modal */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Colonne droite du modal */
+.right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image dans le modal */
+.left-column img {
+    left: 0%;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Paragraphe dans la colonne gauche du modal */
+.left-column p {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+/* Liste dans la colonne droite du modal */
+.right-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Élément de liste dans la colonne droite du modal */
+.right-column li {
+    margin: 0px 350px 0px 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
+
+/* Bouton de fermeture du modal */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: right;
+}
+
+/* Effet survol du bouton de fermeture */
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style pour l'indicateur de défilement vers le bas */
+.scroll-down-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1em;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    animation: bounce 2s infinite;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Texte dans l'indicateur de défilement */
+.scroll-down-indicator span:first-child {
+    font-size: 14px;
+    margin-bottom: 2px; /* Espace entre le texte "Scroll" et la flèche */
+}
+
+/* Flèche dans l'indicateur de défilement */
+.scroll-down-indicator span:last-child {
+    font-size: 24px; /* Taille de la flèche */
+    animation: bounce-icon 1.5s infinite alternate;
+}
+
+/* Effet survol pour l'indicateur de défilement */
+.scroll-down-indicator:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transform: translateX(-50%) scale(1.1);
+}
+
+/* Animation de rebond pour l'indicateur de défilement */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Animation spécifique à l'icône de la flèche */
+@keyframes bounce-icon {
+    from {
+        transform: translateY(-5px);
+    }
+    to {
+        transform: translateY(5px);
+    }
+}

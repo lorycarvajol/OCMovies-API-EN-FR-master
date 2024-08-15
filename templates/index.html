@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustStreamIt</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1><a href="/">JustStreamIt</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Catégories</a>
+                        <div class="dropdown-content">
+                            <a href="#top-rated">Top Rated</a>
+                            <a href="#category1">Adventure</a>
+                            <a href="#category2">Animation</a>
+                            <a href="#category3">Biography</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="scroll-down-indicator" id="scroll-down-indicator">&#x21E3;</div>
+    <main>
+        <section id="best-movie" class="best-movie">
+            <div class="best-movie-image" style="background-image: url('best_movie_image_url')"></div>
+            <div class="best-movie-content">
+                <h2 id="best-movie-title">Titre du meilleur film</h2>
+                <h3 id="best-movie-summary">Résumé du meilleur film</h3>
+                <div class="best-movie-buttons">
+                    <button id="more-info-button">More Info</button>
+                </div>
+            </div>
+        </section>
+        <!-- Reste de votre code ici -->
+    </main>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-details"></div>
+        </div>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
